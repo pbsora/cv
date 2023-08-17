@@ -1,0 +1,173 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #161515;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.info,
+.cv {
+  margin: 50px 0;
+}
+
+.personal-info,
+.ed-input {
+  display: flex;
+  flex-direction: column;
+  background-color: #242323;
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+.education-input {
+  background-color: #242323;
+  border-radius: 20px;
+}
+
+.ed-input {
+  animation: drop 300ms ease;
+  transform-origin: top;
+}
+
+@keyframes drop {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.education-input {
+  position: relative;
+  margin-top: 10px;
+  padding-right: 20px;
+}
+
+.personal-info h1,
+.education-input h1 {
+  margin: 20px 0px;
+  display: flex;
+}
+
+.education-input h1 {
+  margin: 20px 40px;
+}
+
+/* .arrow {
+  position: absolute;
+  right: 10px;
+  top: 0;
+} */
+
+.education-input :nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+}
+
+.personal-info input,
+.ed-input input {
+  max-width: 35vw;
+  width: 35vw;
+  margin: 10px 0;
+  height: 2rem;
+}
+
+#start-date,
+#end-date {
+  width: 15vw;
+}
+
+.date {
+  display: flex;
+  gap: 2rem;
+}
+
+.date div {
+  display: flex;
+  flex-direction: column;
+}
+
+.cv {
+  max-width: 40vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.cv-body {
+  background-color: #242323;
+}
+
+.title {
+  min-width: 40vw;
+  text-align: center;
+  background-color: rgb(135, 97, 172);
+  font-size: 1.5rem;
+  padding: 20px;
+}
+.sub-title {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.education,
+.experience {
+  padding: 20px 50px;
+}
+
+.cv h2 {
+  font-size: 2rem;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgb(169, 124, 213);
+  border-radius: 20px;
+  width: 35vw;
+}
+
+.ed-info,
+.ex-info {
+  display: flex;
+  justify-content: start;
+  gap: 80px;
+  font-size: 1.2rem;
+}
+.role-description {
+  font-size: 1.1rem;
+  margin-left: 203px;
+}
+
+input {
+  color: white;
+  font-size: 1rem;
+  padding: 20px 20px;
+  background-color: #242323;
+  border: none;
+  border-bottom: 2px solid white;
+  transition: 200ms ease-in-out;
+}
+
+input:focus {
+  border: 1.5px white solid;
+  border-radius: 15px;
+  transition: 300ms ease-in-out;
+}
+
+input::placeholder {
+  color: white;
+}
